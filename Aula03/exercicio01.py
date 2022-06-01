@@ -9,7 +9,7 @@ def calcular():
         imc = peso / (altura*altura)
         resultado['text'] = round(imc, 2)
     else:
-        pass
+        resultado['text'] = 'Entrada Invalida'
 
 # Front-end
 # ============================ #
@@ -17,15 +17,16 @@ def calcular():
 janela = Tk()
 janela.title('IMC')
 janela.geometry('400x155')
-janela.configure(bg="#0B0B0B")
+janela.configure(bg="#272626")
+janela.bind('<Return>', lambda event:calcular())
 
 # Widgets
-indicar_peso = Label(janela, text='Peso:', font='Arial 18', foreground='white',bg="#0B0B0B")
-indicar_altura = Label(janela, text='Altura:', font='Arial 18', foreground='white',bg="#0B0B0B")
-entrar_peso = Entry(janela, font='Arial 18', bg="#0B0B0B", foreground='white')
-entrar_altura = Entry(janela, font='Arial 18', bg="#0B0B0B",foreground='white')
+indicar_peso = Label(janela, text='Peso:', font='Arial 18', foreground='white',bg="#272626")
+indicar_altura = Label(janela, text='Altura:', font='Arial 18', foreground='white',bg="#272626")
+entrar_peso = Entry(janela, font='Arial 18', bg="#272626", foreground='white')
+entrar_altura = Entry(janela, font='Arial 18', bg="#272626",foreground='white')
 botao = Button(janela, font='Arial 18', text='Calcular IMC',command=calcular)
-resultado = Label(janela, font='Arial 20', text=' ', bg="#0B0B0B",foreground='white')
+resultado = Label(janela, font='Arial 20', text=' ', bg="#272626",foreground='white')
 
 
 indicar_peso.grid(row=0, column=0, sticky=NSEW)
