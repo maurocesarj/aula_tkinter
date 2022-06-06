@@ -27,6 +27,10 @@ class calculadora():
             label['text'] = 'Operação Inválida  '
             label['font'] = '25'
 
+        elif operacao[-1] == '/ ':
+            label['text'] = 'Operação Inválida  '
+            label['font'] = '25'
+
         else:
             resultado = eval(label['text'])
             label['text'] = str(resultado)
