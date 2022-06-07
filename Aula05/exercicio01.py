@@ -12,6 +12,7 @@ bt2 = Button(fr2, text='Bt no frame 2')
 
 fr1.pack()
 fr2.pack()
+
 lb1.grid(row=0, column=0)
 bt1.grid(row=1, column=1)
 lb2.grid(row=0, column=0)
